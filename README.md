@@ -17,8 +17,7 @@
 | Jamili |
 | Gabriel H |
 | Luiz Felipe |
-| Bruno Alexandre |
-| Run |
+| Ruan |
 
 ## Modelos
 
