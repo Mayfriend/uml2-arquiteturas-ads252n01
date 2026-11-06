@@ -5,16 +5,20 @@
 
 ## Equipe
 
-**Nome do time:** ____________________  
-**Modelo escolhido:** ___ (1 a 5)
+**Nome do time:** haykiuu.main  
+**Modelo escolhido:** _3_ (1 a 5)
 
 | Nome | Usuário do GitHub |
 | --- | --- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Mayara |
+| Rafaela |
+| Walter |
+| João |
+| Jamili |
+| Gabriel H |
+| Luiz Felipe |
+| Bruno Alexandre |
+| Run |
 
 ## Modelos
 
