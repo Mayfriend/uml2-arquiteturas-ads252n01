@@ -18,6 +18,7 @@
 | Gabriel H |
 | Luiz Felipe |
 | Ruan |
+| Gabriela |
 
 ## Modelos
 
