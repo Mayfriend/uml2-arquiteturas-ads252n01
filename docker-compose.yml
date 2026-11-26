@@ -1,0 +1,22 @@
+
+services:
+  banco:
+    image: postgres:16
+    container_name: banco_academico
+    environment:
+      POSTGRES_DB: academico
+      POSTGRES_USER: academico
+      POSTGRES_PASSWORD: academico
+    ports:
+      - "5432:5432"
+    volumes:
+      - dados_postgres:/var/lib/postgresql/data
+      - ./servicos/dados/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U academico -d academico"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  dados_postgres:
