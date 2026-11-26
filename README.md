@@ -19,6 +19,7 @@
 | Luiz Felipe |
 | Ruan |
 | Gabriela |
+| Jully |
 
 ## Modelos
 
