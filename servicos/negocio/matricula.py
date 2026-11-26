@@ -41,3 +41,36 @@ def validar_matricula(cur, aluno_id, disciplina_id):
     if cur.fetchone() is not None:
         return "Você já está matriculado nesta disciplina."
     return None
+
+def efetivar_matricula(conn, aluno_id, disciplina_id):
+    cur = conn.cursor()
+    erro = validar_matricula(cur, aluno_id, disciplina_id)
+    if erro:
+        print(f"[NEGOCIO] Matricula recusada: aluno={aluno_id} disciplina={disciplina_id} motivo={erro}", flush=True)
+        return resposta("erro", erro, 409)
+
+    cur.execute(
+        "INSERT INTO matriculas (aluno_id, disciplina_id) VALUES (%s, %s)",
+        (aluno_id, disciplina_id),
+    )
+    cur.execute("UPDATE disciplinas SET vagas = vagas - 1 WHERE id = %s", (disciplina_id,))
+    conn.commit()
+    print(f"[NEGOCIO] Matricula confirmada: aluno={aluno_id} disciplina={disciplina_id}", flush=True)
+    return resposta("ok", "Matrícula confirmada!")
+
+
+@matricula_bp.route("/matriculas/<int:aluno_id>", methods=["GET"])
+def consultar_matriculas(aluno_id):
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute(
+        """SELECT d.id, d.nome
+           FROM matriculas m
+           JOIN disciplinas d ON d.id = m.disciplina_id
+           WHERE m.aluno_id = %s
+           ORDER BY d.nome""",
+        (aluno_id,),
+    )
+    linhas = cur.fetchall()
+    conn.close()
+    return jsonify([{"id": l[0], "nome": l[1]} for l in linhas])
