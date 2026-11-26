@@ -20,3 +20,24 @@ def matricular():
         return efetivar_matricula(conn, aluno_id, disciplina_id)
     finally:
         conn.close()
+
+def validar_matricula(cur, aluno_id, disciplina_id):
+    """Devolve uma mensagem de erro, ou None se estiver tudo certo."""
+    cur.execute("SELECT 1 FROM alunos WHERE id = %s", (aluno_id,))
+    if cur.fetchone() is None:
+        return "Aluno não encontrado."
+
+    cur.execute("SELECT vagas FROM disciplinas WHERE id = %s", (disciplina_id,))
+    linha = cur.fetchone()
+    if linha is None:
+        return "Disciplina não encontrada."
+    if linha[0] <= 0:
+        return "Não há vagas nesta disciplina."
+
+    cur.execute(
+        "SELECT 1 FROM matriculas WHERE aluno_id = %s AND disciplina_id = %s",
+        (aluno_id, disciplina_id),
+    )
+    if cur.fetchone() is not None:
+        return "Você já está matriculado nesta disciplina."
+    return None
