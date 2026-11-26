@@ -16,14 +16,26 @@
   <h1>Sistema Acadêmico</h1>
 
   <h2>Disciplinas disponíveis</h2>
-  <!-- COMMIT 2: troque esta linha pela tabela de disciplinas -->
+  <table id="tabela">
+    <thead><tr><th>Código</th><th>Disciplina</th><th>Vagas</th></tr></thead>
+    <tbody></tbody>
+  </table>
 
   <h2>Matrícula</h2>
   <!-- COMMIT 3: troque esta linha pelo formulário -->
 
   <script>
     const API = "http://localhost:5000";
-    // COMMIT 2: troque esta linha pela função carregarDisciplinas
+    async function carregarDisciplinas() {
+      const resp = await fetch(API + "/disciplinas");
+      const disciplinas = await resp.json();
+      const corpo = document.querySelector("#tabela tbody");
+      corpo.innerHTML = "";
+      for (const d of disciplinas) {
+        corpo.innerHTML += `<tr><td>${d.id}</td><td>${d.nome}</td><td>${d.vagas}</td></tr>`;
+      }
+    }
+    carregarDisciplinas();
     // COMMIT 3: troque esta linha pelas funções matricular e minhasMatriculas
   </script>
 </body>
