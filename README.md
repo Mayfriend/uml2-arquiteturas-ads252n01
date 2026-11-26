@@ -10,16 +10,16 @@
 
 | Nome | Usuário do GitHub |
 | --- | --- |
-| Mayara |
-| Rafaela |
-| Walter |
-| João |
-| Jamili |
-| Gabriel H |
-| Luiz Felipe |
-| Ruan |
-| Gabriela |
-| Jully |
+| Mayara | Mayfriend
+| Rafaela | CodeLura1990
+| Walter | snowbarbosa
+| João | mirainov
+| Jamili | jamilisantosp
+| Gabriel H | asshenriquesantos
+| Luiz Felipe | lipsdevs
+| Ruan | desouzahortencesruan
+| Gabriela | matosribeirog
+| Jully | JullyLi
 
 ## Modelos
 
