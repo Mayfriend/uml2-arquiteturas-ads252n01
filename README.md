@@ -15,9 +15,9 @@
 | Walter | snowbarbosa
 | João | mirainov
 | Jamili | jamilisantosp
-| Gabriel H | asshenriquesantos
+| Gabriel H | asshenriquesantos-hub
 | Luiz Felipe | lipsdevs
-| Ruan | desouzahortencesruan
+| Ruan | desouzahortencesruan-design
 | Gabriela | matosribeirog
 | Jully | JullyLi
 
