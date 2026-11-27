@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from db import conectar
 
-matricula_bp = Blueprint("matricula", _name_)
+matricula_bp = Blueprint("matricula", __name__)
 
 
 def resposta(status, mensagem, codigo=200):

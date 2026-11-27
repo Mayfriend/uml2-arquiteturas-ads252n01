@@ -1,4 +1,3 @@
-
 services:
   banco:
     image: postgres:16
@@ -17,6 +16,28 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
+  api:
+    build: ./servicos/negocio
+    container_name: api_academico
+    environment:
+      DB_HOST: banco
+      DB_NAME: academico
+      DB_USER: academico
+      DB_PASSWORD: academico
+    ports:
+      - "5000:5000"
+    depends_on:
+      banco:
+        condition: service_healthy
+
+  tela:
+    build: ./servicos/apresentacao
+    container_name: tela_academica
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
 
 volumes:
   dados_postgres:

@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS alunos (
 CREATE TABLE IF NOT EXISTS disciplinas (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    codigo VARCHAR(20) UNIQUE NOT NULL
+    codigo VARCHAR(20) UNIQUE NOT NULL,
+    vagas INTEGER NOT NULL DEFAULT 30
 );
 
 CREATE TABLE IF NOT EXISTS matriculas (
@@ -24,9 +25,9 @@ INSERT INTO alunos (nome, matricula) VALUES
 ('Aluno 3', '3')
 ON CONFLICT (matricula) DO NOTHING;
 
-INSERT INTO disciplinas (nome, codigo) VALUES
-('Programação', '1'),
-('Banco de Dados', '2'),
-('Engenharia de Software', '3'),
-('Arquitetura de Sistemas', '4')
+INSERT INTO disciplinas (nome, codigo, vagas) VALUES
+('Programação', '1', 30),
+('Banco de Dados', '2', 30),
+('Engenharia de Software', '3', 30),
+('Arquitetura de Sistemas', '4', 1)
 ON CONFLICT (codigo) DO NOTHING;
