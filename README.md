@@ -14,7 +14,7 @@
 | Rafaela | CodeLura1990
 | Walter | snowbarbosa
 | João | mirainov
-| Jamili | jamilisantosp
+| Jamili | bmj7hm7gs8-max
 | Gabriel H | asshenriquesantos-hub
 | Luiz Felipe | lipsdevs
 | Ruan | desouzahortencesruan-design
