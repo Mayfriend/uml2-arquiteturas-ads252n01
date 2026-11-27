@@ -15,5 +15,5 @@
 | ID | Requisito |
 | --- | --- |
 | RNF01 | O sistema deve seguir a arquitetura em 3 camadas (apresentação, negócio e dados): a tela só se comunica com a camada de negócio, e somente a camada de negócio acessa o banco de dados. |
-| RNF02 |  |
+| RNF02 | O sistema deve responder às requisições de matrícula e de consulta em até 2 segundos em uso normal. |
 | RNF03 |  |
