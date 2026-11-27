@@ -16,10 +16,10 @@ api_academico  | 172.18.0.1 - - [27/Nov/2026 01:02:39] "POST /matricula HTTP/1.1
 api_academico  | 172.18.0.1 - - [27/Nov/2026 01:02:40] "GET /disciplinas HTTP/1.1" 200 -
 api_academico  | 172.18.0.1 - - [27/Nov/2026 01:03:25] "GET /matriculas/3 HTTP/1.1" 200 -
 api_academico  | [NEGOCIO] Matricula recusada: aluno=3 disciplina=4 motivo=Não há vagas nesta disciplina.
-api_academico  | 172.18.0.1 - - [27/Nov/2026 01:03:29] "[31m[1mPOST /matricula HTTP/1.1[0m" 409 -
+api_academico  | 172.18.0.1 - - [27/Nov/2026 01:03:29] "POST /matricula HTTP/1.1" 409 -
 api_academico  | 172.18.0.1 - - [27/Nov/2026 01:03:30] "GET /disciplinas HTTP/1.1" 200 -
 api_academico  | [NEGOCIO] Matricula recusada: aluno=1 disciplina=4 motivo=Não há vagas nesta disciplina.
-api_academico  | 172.18.0.1 - - [27/Nov/2026 01:04:06] "[31m[1mPOST /matricula HTTP/1.1[0m" 409 -
+api_academico  | 172.18.0.1 - - [27/Nov/2026 01:04:06] "POST /matricula HTTP/1.1" 409 -
 api_academico  | 172.18.0.1 - - [27/Nov/2026 01:04:06] "GET /disciplinas HTTP/1.1" 200 -
 ```
 
