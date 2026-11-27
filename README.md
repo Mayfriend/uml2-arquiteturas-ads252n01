@@ -20,6 +20,7 @@
 | Ruan | desouzahortencesruan-design
 | Gabriela | matosribeirog
 | Jully | JullyLi
+| Sidney | SidneyBrasil
 
 ## Modelos
 
