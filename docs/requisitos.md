@@ -14,6 +14,6 @@
 
 | ID | Requisito |
 | --- | --- |
-| RNF01 |  |
+| RNF01 | O sistema deve seguir a arquitetura em 3 camadas (apresentação, negócio e dados): a tela só se comunica com a camada de negócio, e somente a camada de negócio acessa o banco de dados. |
 | RNF02 |  |
 | RNF03 |  |
